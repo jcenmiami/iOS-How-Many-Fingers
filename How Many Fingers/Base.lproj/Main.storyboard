@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,30 +22,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess how many fingers I'm holding up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imH-fg-03J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess how many fingers I'm holding up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imH-fg-03J">
                                 <rect key="frame" x="16" y="61" width="288" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter guess here!" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-s7-m77">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter guess here!" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-s7-m77">
                                 <rect key="frame" x="16" y="140" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gqJ-SQ-2dz"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxc-xG-gof">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxc-xG-gof">
                                 <rect key="frame" x="16" y="260" width="288" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="4Ee-fb-pxM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qq-rp-sxj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qq-rp-sxj">
                                 <rect key="frame" x="16" y="204" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="8gW-VS-sup"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Guess">
@@ -56,6 +62,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="imH-fg-03J" firstAttribute="leading" secondItem="ajQ-s7-m77" secondAttribute="leading" id="2jF-MU-Pte"/>
+                            <constraint firstItem="imH-fg-03J" firstAttribute="trailing" secondItem="ajQ-s7-m77" secondAttribute="trailing" id="2wG-x6-uQO"/>
+                            <constraint firstItem="ajQ-s7-m77" firstAttribute="top" secondItem="imH-fg-03J" secondAttribute="bottom" constant="8" symbolic="YES" id="Cbi-vD-8Du"/>
+                            <constraint firstItem="4Qq-rp-sxj" firstAttribute="top" secondItem="ajQ-s7-m77" secondAttribute="bottom" constant="34" id="DNg-IX-yHn"/>
+                            <constraint firstItem="imH-fg-03J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="G6n-pP-gF8"/>
+                            <constraint firstItem="4Qq-rp-sxj" firstAttribute="trailing" secondItem="fxc-xG-gof" secondAttribute="trailing" id="Lhf-9d-E2A"/>
+                            <constraint firstItem="imH-fg-03J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="S7m-RN-GWe"/>
+                            <constraint firstItem="ajQ-s7-m77" firstAttribute="leading" secondItem="4Qq-rp-sxj" secondAttribute="leading" id="TAg-dH-VUu"/>
+                            <constraint firstItem="4Qq-rp-sxj" firstAttribute="leading" secondItem="fxc-xG-gof" secondAttribute="leading" id="XCl-Yg-g4E"/>
+                            <constraint firstItem="fxc-xG-gof" firstAttribute="top" secondItem="4Qq-rp-sxj" secondAttribute="bottom" constant="1" id="ZFB-aj-BfJ"/>
+                            <constraint firstItem="imH-fg-03J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="er2-Z7-5y7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fxc-xG-gof" secondAttribute="bottom" constant="265" id="uUq-3f-lTL"/>
+                            <constraint firstItem="ajQ-s7-m77" firstAttribute="trailing" secondItem="4Qq-rp-sxj" secondAttribute="trailing" id="uqb-sA-db5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="inputAnswer" destination="ajQ-s7-m77" id="U1b-kA-E6M"/>
