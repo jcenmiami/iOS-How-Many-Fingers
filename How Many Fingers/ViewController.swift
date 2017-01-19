@@ -18,14 +18,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func submitAnswer(_ sender: Any) {
-        let userInput = inputAnswer.text
         
-        let randomNumber = String(arc4random_uniform(6))
+        let userInput: String?
+        
+        userInput = inputAnswer?.text
+        
+        let randomNumber: String?
+        
+        randomNumber = String(arc4random_uniform(6))
         
         if randomNumber == userInput {
-            outputAnswer.text = "Yes the answer is " + randomNumber + "!"
+            outputAnswer.text = "Yes the answer is " + randomNumber! + "!"
         } else {
-            outputAnswer.text = "The correct answer is \(randomNumber)!"
+            outputAnswer.text = "The correct answer is \(randomNumber!)!"
         }
         
         
